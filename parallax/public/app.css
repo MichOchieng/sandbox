@@ -6,10 +6,12 @@ html {
     border: 1px solid red;
     height: 100vh;
     width: 100vw;
+    position:absolute;
+    text-align:center;
 }
 
 h2 {
     color: white;
-    margin: 0 auto;
-    size: 10em;
+    vertical-align: middle;
+    font-size: 10em;
 }
