@@ -6,7 +6,7 @@ import { HeaderCard } from "./component/headerCard/headerCard";
 export default () => (
   <Paper
   sx={{
-     border: "1px solid green",
+     border: "3px dashed green",
      width: "100%",
      height: "100%"
   }}
