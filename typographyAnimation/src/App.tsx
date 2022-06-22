@@ -1,8 +1,16 @@
+import { Paper } from "@mui/material";
+import { ThemeProvider } from "@mui/system";
 import * as React from "react";
+import { HeaderCard } from "./component/headerCard/headerCard";
 
 export default () => (
-  <>
-    <h1>Welcome to React Parcel Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
-  </>
+  <Paper
+  sx={{
+     border: "1px solid green",
+     width: "100%",
+     height: "100%"
+  }}
+ >
+    <HeaderCard/>
+  </Paper>
 );
