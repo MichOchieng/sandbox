@@ -1,25 +1,38 @@
-
 import * as React from "react";
 import { VerticalScroll } from "./components/verticalScroll";
 import SideScroll from "./components/sideScroll";
 import { Grid } from "@mui/material";
+import { Test } from "./components/test";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 
 const App = () => {
   return(
-    <Grid
-    container
-    >
+    <ParallaxProvider scrollAxis="horizontal">
       <Grid
-        item
+        container
+        alignItems="center"
+        justifyContent="center"
         sx={{
-          maxHeight: '40vh',
-          maxWidth: '40vw'
+          minHeight: '98vh'
         }}
-      > 
-        <SideScroll/>
-      </Grid>
-    </Grid>
+        >
+          <Grid
+            item
+            sx={{
+              border: '1px solid red ',
+
+              minHeight: '40vh',
+              minWidth: '40vw',
+            }}
+          > 
+
+            <Test/>
+            {/* <SideScroll/> */}
+          </Grid>
+        </Grid>
+    </ParallaxProvider>
+  
   )
 };
 
