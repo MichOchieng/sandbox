@@ -1,14 +1,26 @@
 
 import * as React from "react";
 import { VerticalScroll } from "./components/verticalScroll";
+import SideScroll from "./components/sideScroll";
 import { Grid } from "@mui/material";
 
 
-export default () => (
-  <Grid
+const App = () => {
+  return(
+    <Grid
     container
-  >
-    {/* <VerticalScroll/> */}
-    
-  </Grid>
-);
+    >
+      <Grid
+        item
+        sx={{
+          maxHeight: '40vh',
+          maxWidth: '40vw'
+        }}
+      > 
+        <SideScroll/>
+      </Grid>
+    </Grid>
+  )
+};
+
+export default App;
