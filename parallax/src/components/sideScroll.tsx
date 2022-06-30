@@ -16,7 +16,7 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
     {/* Base layer  */}
       <ParallaxLayer offset={offset} speed={0.2}>
         <Box sx={{
-            // backgroundColor: '#20232f',
+            backgroundColor: '#20232f',
             width: '100%',
             height: '100%',
         }}>
@@ -29,7 +29,8 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
   
     {/* Divider thing */}
       <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
-        <Box className={`${styles.slopeEnd} ${styles[gradient]}`} />
+        <Box className={`${styles.slopeEnd} `} />
+        
       </ParallaxLayer>
         
     
