@@ -3,36 +3,31 @@ import { VerticalScroll } from "./components/verticalScroll";
 import SideScroll from "./components/sideScroll";
 import { Grid } from "@mui/material";
 import { Test } from "./components/test";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 
 const App = () => {
-  return(
-    <ParallaxProvider scrollAxis="horizontal">
+  return (
+    <Grid
+      container
+      alignItems="center"
+      justifyContent="center"
+      sx={{
+        minHeight: '98vh'
+      }}
+    >
       <Grid
-        container
-        alignItems="center"
-        justifyContent="center"
+        item
         sx={{
-          minHeight: '98vh'
+          border: '1px solid red ',
+          minHeight: '40vh',
+          minWidth: '80vw',
+          maxWidth: '80vw',
+          position: 'relative'
         }}
-        >
-          <Grid
-            item
-            sx={{
-              border: '1px solid red ',
-
-              minHeight: '40vh',
-              minWidth: '40vw',
-            }}
-          > 
-
-            <Test/>
-            {/* <SideScroll/> */}
-          </Grid>
-        </Grid>
-    </ParallaxProvider>
-  
+      >
+        <SideScroll />
+      </Grid>
+    </Grid>
   )
 };
 
