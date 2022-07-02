@@ -35,7 +35,7 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
           <Grid
           container
           direction={'column'}
-          justifyContent={"center"}
+          justifyContent={"space-between"}
           sx={{
             border: "1px solid pink",
             width: "40%",
