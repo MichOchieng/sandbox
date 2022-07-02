@@ -1,4 +1,4 @@
-import { Button, Paper } from "@mui/material"
+import { Button, Grid, Paper, Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import * as React from "react"
@@ -24,14 +24,80 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
       </ParallaxLayer>
       {/* Title text */}
       <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
-        <span>Test</span>
+        {/* <span>Test</span> */}
+        <Box
+          justifyContent={"flex-end"}
+          sx={{
+            height: "100%",
+            display: "flex",
+          }}
+        >
+          <Grid
+          container
+          direction={'column'}
+          justifyContent={"center"}
+          sx={{
+            border: "1px solid pink",
+            width: "40%",
+            height: "100%"
+            
+          }}
+        >
+          {/* Title */}
+          <Grid
+            item
+            sx={{
+              border: "1px solid red"
+            }}
+          >
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: '0.3em'
+              }}
+            >
+              Title
+            </Typography>
+          </Grid>
+
+          {/* Description */}
+          <Grid
+            item
+            sx={{
+              border: "1px solid yellow"
+            }}
+          >
+            <Typography
+              sx={{
+              }}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </Typography>
+          </Grid>
+
+          {/* Button group */}
+          <Grid
+            item
+            sx={{
+              border: "1px solid cyan",
+              justifyContent: "center",
+              alignContent: "center",
+              textAlign: "center"
+            }}
+          >
+            <Button>Link</Button>
+            <Button>Demo</Button>
+          </Grid>
+        </Grid>
+        </Box>
+        
       </ParallaxLayer>
   
     {/* Divider thing */}
-      <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
+      {/* <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
         <Box className={`${styles.slopeEnd} `} />
         
-      </ParallaxLayer>
+      </ParallaxLayer> */}
         
     
     </>
