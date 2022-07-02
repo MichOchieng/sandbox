@@ -1,8 +1,6 @@
 import * as React from "react";
-import { VerticalScroll } from "./components/verticalScroll";
 import SideScroll from "./components/sideScroll";
 import { Grid } from "@mui/material";
-import { Test } from "./components/test";
 
 
 const App = () => {
@@ -18,7 +16,6 @@ const App = () => {
       <Grid
         item
         sx={{
-          border: '1px solid red ',
           minHeight: '40vh',
           minWidth: '80vw',
           maxWidth: '80vw',
