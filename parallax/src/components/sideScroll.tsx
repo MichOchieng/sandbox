@@ -22,12 +22,33 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
         }}>
         </Box>
       </ParallaxLayer>
+
+    {/* Divider thing
+        Turn this into a styled component
+    */}
+      <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
+        <Box 
+          sx={{
+            clipPath: "circle(49.3% at 100% 50%)",
+            position: "absolute",
+            width: "110%",
+            height: "100%",
+            cursor: "pointer",
+            boxShadow: "inset 0 0 2000px rgba(255, 255, 255, .5)",
+            filter: "blur(60px)",
+          }}
+        />
+        
+      </ParallaxLayer>
+
+
       {/* Title text */}
       <ParallaxLayer className={`${styles.text} ${styles.number}`} offset={offset} speed={0.3}>
         {/* <span>Test</span> */}
         <Box
           justifyContent={"flex-end"}
           sx={{
+            width: "100%",
             height: "100%",
             display: "flex",
           }}
@@ -92,12 +113,6 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
         </Box>
         
       </ParallaxLayer>
-  
-    {/* Divider thing */}
-      {/* <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
-        <Box className={`${styles.slopeEnd} `} />
-        
-      </ParallaxLayer> */}
         
     
     </>
