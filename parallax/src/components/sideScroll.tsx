@@ -56,6 +56,7 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
           <Grid
           container
           direction={'column'}
+          // justifyContent={"space-between"}
           justifyContent={"space-between"}
           sx={{
             border: "1px solid pink",
@@ -68,7 +69,9 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
           <Grid
             item
             sx={{
-              border: "1px solid red"
+              border: "1px solid red",
+              textAlign: "right",
+              maxWidth: "60%"
             }}
           >
             <Typography
@@ -85,7 +88,8 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
           <Grid
             item
             sx={{
-              border: "1px solid yellow"
+              border: "1px solid yellow",
+              textAlign: "right",
             }}
           >
             <Typography
@@ -99,11 +103,9 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
           {/* Button group */}
           <Grid
             item
+
             sx={{
               border: "1px solid cyan",
-              justifyContent: "center",
-              alignContent: "center",
-              textAlign: "center"
             }}
           >
             <Button>Link</Button>
@@ -112,9 +114,7 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
         </Grid>
         </Box>
         
-      </ParallaxLayer>
-        
-    
+      </ParallaxLayer>  
     </>
   )
 
@@ -129,11 +129,7 @@ export default function SideScroll(){
     }
 
     return(
-        <div
-            style={{
-                backgroundColor: 'yellow'
-            }}
-        >
+        <div>
             <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
                 <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
                 <Page offset={1} gradient="teal" onClick={() => scroll(2)} />
