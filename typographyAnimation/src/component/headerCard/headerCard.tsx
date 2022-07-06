@@ -20,7 +20,7 @@ export const HeaderCard = () => {
       }
 
     const springs = useSprings(
-        name.length, name.map((t,i) => ({...base,delay: 100*i}))
+        name.length, name.map((t,i) => ({...base,delay: (name.length-i)*Math.floor(Math.random()*name.length)}))
         )
     
     return (
@@ -38,7 +38,6 @@ export const HeaderCard = () => {
                 {springs.map((s, index) => (
                     <Grid item xs={3} sm={3} md={3} key={index}>
                         <animated.h1 
-                            key={`char${index}`}
                             style={s}
                         >
                             {name[index]}
