@@ -16,7 +16,7 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
     {/* Base layer  */}
       <ParallaxLayer offset={offset} speed={0.2}>
         <Box sx={{
-            backgroundColor: '#20232f',
+            backgroundColor: 'black',
             width: '100%',
             height: '100%',
         }}>
@@ -26,7 +26,8 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
     {/* Divider thing
         Turn this into a styled component
     */}
-      <ParallaxLayer offset={offset} speed={0.6} onClick={onClick}>
+    {/* onClick={onClick} */}
+      <ParallaxLayer offset={offset} speed={0.6}>
         <Box 
           sx={{
             clipPath: "circle(49.3% at 100% 50%)",
@@ -56,22 +57,21 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
           <Grid
           container
           direction={'column'}
-          // justifyContent={"space-between"}
-          justifyContent={"space-between"}
+          // justifyContent={"flex-end"}
           sx={{
             border: "1px solid pink",
             width: "40%",
-            height: "100%"
+            height: "100%",
+            paddingLeft: "6%",
             
           }}
-        >
+        > 
           {/* Title */}
           <Grid
             item
             sx={{
               border: "1px solid red",
               textAlign: "right",
-              maxWidth: "60%"
             }}
           >
             <Typography
@@ -90,26 +90,67 @@ const Page = ({ offset, gradient, onClick }: PageProps) => (
             sx={{
               border: "1px solid yellow",
               textAlign: "right",
+              height: "70%",
+              overflow: "hidden",
+              // borderRadius: 10
             }}
           >
             <Typography
               sx={{
+                overflowY: "scroll",
+                paddingRight: "17px",
+                boxSizing: "content-box",
+                width: "100%",
+                height: "100%"
               }}
             >
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              aaaaaaaaaaa
             </Typography>
           </Grid>
 
           {/* Button group */}
           <Grid
             item
-
+            justifyContent={"flex-end"}
             sx={{
               border: "1px solid cyan",
+              display: "flex",
             }}
           >
-            <Button>Link</Button>
-            <Button>Demo</Button>
+            <Button
+              variant="outlined"
+              sx={{
+                marginRight: "1em"
+              }}
+            >Link</Button>
+            <Button
+              variant="outlined"
+            >Demo</Button>
+          </Grid>
+          
+          <Grid
+            item
+            justifyContent={"flex-end"}
+            sx={{
+              border: "1px solid cyan",
+              display: "flex",
+            }}
+          >
+            <Button
+              variant="outlined"
+              sx={{
+                marginRight: "1em"
+              }}
+            >Prev</Button>
+            <Button
+              variant="outlined"
+            >Next</Button>
           </Grid>
         </Grid>
         </Box>
@@ -129,12 +170,16 @@ export default function SideScroll(){
     }
 
     return(
-        <div>
-            <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
-                <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
-                <Page offset={1} gradient="teal" onClick={() => scroll(2)} />
-                <Page offset={2} gradient="tomato" onClick={() => scroll(0)} />
-            </Parallax>
-        </div>
+        <Box
+          sx={{
+            width: "60vw"
+          }}
+        >
+          <Parallax className={styles.container} ref={parallax} pages={3} horizontal>
+              <Page offset={0} gradient="pink" onClick={() => scroll(1)} />
+              <Page offset={1} gradient="teal" onClick={() => scroll(2)} />
+              <Page offset={2} gradient="tomato" onClick={() => scroll(0)} />
+          </Parallax>
+        </Box>
     )
 }

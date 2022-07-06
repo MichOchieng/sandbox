@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 60vw;
     /* overflow: hidden;
     max-height: 40vh;
     max-width: 40vw; */
@@ -12,7 +13,7 @@
   }
 
   .text {
-    pointer-events: none;
+    /* pointer-events: none; */
     justify-content: start !important;
     font-family: 'Kanit', sans-serif;
     line-height: 0px;
