@@ -16,10 +16,10 @@ const App = () => {
       <Grid
         item
         sx={{
-          minHeight: '40vh',
-          minWidth: '80vw',
-          maxWidth: '80vw',
-          position: 'relative'
+          minHeight: '50vh',
+          // maxWidth: '60vw',
+          // width: "60vw",
+          position: 'relative',
         }}
       >
         <SideScroll />
