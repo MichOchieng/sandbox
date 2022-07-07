@@ -36,7 +36,14 @@
 
     .sidebar-sidenav {
         @apply
-        overflow-hidden h-1/6
-        border border-red-50
+        overflow-hidden flex flex-col h-24 justify-start
+        my-1
+    }
+
+    .sidenav-button {
+        @apply 
+        h-1/2 flex text-white text-base font-medium
+        rounded-md p-3 items-center ml-3 mr-3 
+        hover:bg-gray-500 transition-all duration-100 ease-linear
     }
 }
