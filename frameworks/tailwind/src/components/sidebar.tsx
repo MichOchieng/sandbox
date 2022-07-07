@@ -1,4 +1,4 @@
-import { FaFire, FaGripfire, FaPoo, FaUserFriends } from 'react-icons/fa';
+import { FaAdn, FaAtlassian, FaBitcoin, FaCanadianMapleLeaf, FaFire, FaGripfire, FaPlus, FaPoo, FaUserFriends } from 'react-icons/fa';
 
 export default function SideBar () {
 
@@ -40,23 +40,23 @@ export default function SideBar () {
     const DirectMessages = () => (
         <div className='sidebar-dms'>
             <span className='dms-title'>
-
+                DIRECT MESSAGES <FaPlus className='mx-auto float-right'/>
             </span>
             <div className='dms-chats'>
-                <ChatIcon/>
-                <ChatIcon/>
-                <ChatIcon/>
-                <ChatIcon/>
+                <ChatIcon icon={<FaBitcoin/>} user={"Bitboi"}/>
+                <ChatIcon icon={<FaAtlassian/>} user={"Atlassian"}/>
+                <ChatIcon icon={<FaAdn/>} user={"Adn"}/>
+                <ChatIcon icon={<FaCanadianMapleLeaf/>} user={"Leafy"}/>
             </div>
         </div>
     );
 
     const ChatIcon = ({icon,user}:any) => (
-        <div className='chaticon'>
+        <div className='chaticon group'>
             <span>
                 {icon}{user}
             </span>
-            <span>X</span>
+            <span className='chaticon-x group-hover:scale-100'>X</span>
         </div>
     )
 
@@ -83,6 +83,7 @@ export default function SideBar () {
             >
                 <SearchBar/>
                 <SideNav/>
+                <DirectMessages/>
             </div>
         </div>
     );
