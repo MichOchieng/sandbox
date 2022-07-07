@@ -1,4 +1,4 @@
-import { FaFire, FaPoo } from 'react-icons/fa';
+import { FaFire, FaGripfire, FaPoo, FaUserFriends } from 'react-icons/fa';
 
 export default function SideBar () {
 
@@ -27,21 +27,38 @@ export default function SideBar () {
 
     const SideNav = () => (
         <div className='sidebar-sidenav'>
-            <button>
-                Friends
+            <button className='sidenav-button'>
+                <FaUserFriends className='mr-3 text-2xl'/> Friends
             </button>
 
-            <button>
-                Nitro
+            <button className='sidenav-button'>
+                <FaGripfire className='mr-3 text-2xl'/> Nitro
             </button>
         </div>
     );
 
     const DirectMessages = () => (
-        <div>
-            
+        <div className='sidebar-dms'>
+            <span className='dms-title'>
+
+            </span>
+            <div className='dms-chats'>
+                <ChatIcon/>
+                <ChatIcon/>
+                <ChatIcon/>
+                <ChatIcon/>
+            </div>
         </div>
     );
+
+    const ChatIcon = ({icon,user}:any) => (
+        <div className='chaticon'>
+            <span>
+                {icon}{user}
+            </span>
+            <span>X</span>
+        </div>
+    )
 
     return(
         <div
