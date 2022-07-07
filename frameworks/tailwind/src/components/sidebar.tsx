@@ -11,11 +11,39 @@ export default function SideBar () {
         </div>
     );
 
+    const SearchBar = () => (
+        <div>
+
+        </div>
+    );
+
+    const FriendsNav = () => (
+        <div>
+            
+        </div>
+    );
+
+    const SideNav = () => (
+        <div>
+            
+        </div>
+    );
+
+    const DirectMessages = () => (
+        <div>
+            
+        </div>
+    );
+
     return(
-        <>
+        <div
+            className='
+            overflow-hidden w-1/2
+            '
+        >
             <div
                 className="
-                fixed top-0 h-screen w-16 m-0 flex flex-col 
+                float-left h-screen w-1/4 m-0 flex flex-col 
                 bg-primary text-white shadow-lg"
             >
                 <SidebarIcon icon={<FaFire size='28'/>}/>
@@ -25,11 +53,11 @@ export default function SideBar () {
             </div>
             <div
             className="
-            h-screen w-32 flex-col 
+            h-screen w-3/4 flex-col overflow-hidden
             bg-secondary text-white shadow-lg"
             >
                 
             </div>
-        </>
+        </div>
     );
 };
