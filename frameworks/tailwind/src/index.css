@@ -37,13 +37,28 @@
     .sidebar-sidenav {
         @apply
         overflow-hidden flex flex-col h-24 justify-start
-        my-1
+        my-1;
     }
 
     .sidenav-button {
         @apply 
-        h-1/2 flex text-white text-base font-medium
+        h-1/2 flex text-gray-400 text-base font-medium
         rounded-md p-3 items-center ml-3 mr-3 
-        hover:bg-gray-500 transition-all duration-100 ease-linear
+        hover:bg-gray-500 hover:text-white
+        transition-all duration-100 ease-linear;
+    }
+
+    .sidebar-dms {
+        @apply
+        flex flex-col justify-start
+        my-1 ml-3 mr-3 p-3
+        text-gray-400 text-base;
+    }
+
+    .dms-title {
+        @apply 
+        flex items-center mb-4
+        font-medium text-xs hover:text-white
+        transition-all duration-100 ease-linear;
     }
 }
