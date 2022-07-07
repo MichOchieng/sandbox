@@ -12,20 +12,28 @@ export default function SideBar () {
     );
 
     const SearchBar = () => (
-        <div>
-
+        <div className='sidebar-search'>
+            <input placeholder='Find or start the conversation' className='sidebar-searchDialog'>
+                
+            </input>
         </div>
     );
 
     const FriendsNav = () => (
-        <div>
+        <div className='navbar-friends'>
             
         </div>
     );
 
     const SideNav = () => (
-        <div>
-            
+        <div className='sidebar-sidenav'>
+            <button>
+                Friends
+            </button>
+
+            <button>
+                Nitro
+            </button>
         </div>
     );
 
@@ -53,10 +61,11 @@ export default function SideBar () {
             </div>
             <div
             className="
-            h-screen w-3/4 flex-col overflow-hidden
-            bg-secondary text-white shadow-lg"
+            h-screen w-3/4 flex flex-col overflow-hidden
+            bg-gray-700 shadow-lg"
             >
-                
+                <SearchBar/>
+                <SideNav/>
             </div>
         </div>
     );
