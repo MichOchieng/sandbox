@@ -1,9 +1,10 @@
-import React from 'react';
+import SideBar from './components/sidebar';
+
 
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className='flex'>
+      <SideBar />
+    </div>
   )
 }
