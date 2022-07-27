@@ -3,9 +3,8 @@
 @tailwind utilities;
 
 @layer component {
-  .test {
-    @apply
-    border border-cyan-300
-  }
-  
+    .pageContent {
+      @apply
+      flex justify-center border border-black
+    }
 }

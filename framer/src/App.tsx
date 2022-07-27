@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
-
+import { LoadingPage } from './components/loadingPage';
+import { TextBox } from './components/textBox';
 function App() {
   return (
-    <div className="App">
-      <h1>test</h1>
+    <div className='flex h-screen w-screen items-center justify-center border border-black'>
+      {/* <TextBox/> */}
+      <LoadingPage/>
     </div>
   );
 }
