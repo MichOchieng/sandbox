@@ -7,4 +7,9 @@
       @apply
       flex justify-center border border-black
     }
+
+    .cardText {
+      @apply
+      text-white
+    }
 }
