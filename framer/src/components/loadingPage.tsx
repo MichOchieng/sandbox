@@ -32,10 +32,30 @@ export const LoadingPage = () => {
         }
     }
 
+    const svg = {
+        hidden: {
+            height: 0,
+            opacity: 0,
+        },
+        visible: {
+            height: "100vh",
+            opacity: 1,
+        }
+    }
+
     return(
         <motion.svg 
-            className="border border-black w-full h-full bg-slate-700"
-            viewBox="0 0 1024 1024">
+            className="border border-black bg-slate-700"
+            viewBox="0 0 1024 1024"
+            variants={svg}
+            initial="visible"
+            animate="hidden"
+            transition={{
+                duration: 3,
+                delay:3,
+                ease: [0.87, 0, 0.13, 1],
+              }}
+            >
                 <g>
                     <motion.path
                         d={bigMPath}
