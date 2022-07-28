@@ -14,8 +14,8 @@ export const ExpandingGallery = ({data}:Props) => {
     const [activeCard,setActiveCard] = useState<number>(1);
     const onClick = (id: number) => setActiveCard(id);
 
-    const cardOn  = "w-5/6 mx-2 rounded-xl transition-all ease-in-out"
-    const cardOff = "w-1/6 mx-2 rounded-xl transition-all ease-in-out"
+    const cardOn  = "flex items-center justify-center w-5/6 mx-2 rounded-xl transition-all ease-in-out"
+    const cardOff = "flex w-1/6 mx-2 rounded-xl transition-all ease-in-out"
 
     return(
         <div
@@ -29,7 +29,7 @@ export const ExpandingGallery = ({data}:Props) => {
                         onClick={() => onClick(card.id)}
                         style={{backgroundImage: `url(${card.url})`}}
                     >
-                        <h2 className="cardText">{card.title}</h2>
+                        {(activeCard === card.id )  && <h2 className="cardText">{card.title}</h2>}
                     </div>
                 ))
             

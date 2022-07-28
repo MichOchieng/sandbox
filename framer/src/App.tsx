@@ -7,8 +7,8 @@ function App() {
   return (
     <div className='flex h-screen w-screen items-center justify-center border border-black'>
       {/* <TextBox/> */}
-      {/* <LoadingPage/> */}
-      <ExpandingGallery data={CardData}/>
+      <LoadingPage/>
+      {/* <ExpandingGallery data={CardData}/> */}
     </div>
   );
 }
