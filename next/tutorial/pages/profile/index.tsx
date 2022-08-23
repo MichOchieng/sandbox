@@ -7,3 +7,5 @@ const Default: NextPage = () => {
         </div>
     )
 }
+
+export default Default

@@ -11,3 +11,5 @@ const Profile: NextPage = () => {
         </div>
     )
 }
+
+export default Profile
