@@ -7,4 +7,33 @@
     @apply
     border border-red-500
   }
+
+  .smoothed{
+    @apply
+    transition-all ease-in-out
+    duration-500
+  }
+
+  .navBar {
+    @apply
+    w-full h-32 bg-amber-400 flex flex-row
+    items-center justify-between border-b border-slate-400
+  }
+
+  .navBar-container{
+    @apply
+    h-full w-fit flex flex-row items-center
+  }
+
+  .navBar-text {
+    @apply
+    text-white font-thin text-lg
+  }
+
+  .navBar-button {
+    @apply
+    navBar-text mx-3
+  }
+
+
 }
