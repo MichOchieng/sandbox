@@ -1,14 +1,13 @@
 import type { NextPage } from 'next'
+import { Header } from '../components/header'
+import { Posts } from '../components/posts'
 
 const Home: NextPage = () => {
   return (
     <div className="h-full w-full">
       {/* Header */}
-      <div
-        className="aid h-2/6 w-full"
-      >
-        <h1>test</h1>
-      </div>
+      <Header/>
+      <Posts/>
     </div>
   )
 }
