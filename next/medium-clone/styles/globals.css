@@ -35,5 +35,16 @@
     navBar-text mx-3
   }
 
+  .container {
+    @apply
+    w-5/6 flex h-full mx-auto smoothed
+  }
+
+  .button {
+    @apply
+    border-slate-400 border bg-black items-center text-white
+    rounded-3xl px-10 py-2 hover:scale-105 smoothed text-center 
+    flex justify-center
+  }
 
 }
