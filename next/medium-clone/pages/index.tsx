@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Header } from '../components/header'
 import { Posts } from '../components/posts'
-import {sanityClient, urlFor} from "../sanity"
+import {sanityClient} from "../sanity"
 import { Post } from '../typings'
 
 
@@ -28,13 +28,14 @@ export const getServerSideProps = async ({}) =>{
   const query = `*[_type == "post"]{
     _id,
     title,
-    author => {
+    author -> {
         name,
         image
     },
     description,
     mainImage,
-    slug
+    slug,
+    publishedAt,
   }`;
 
   const posts = await sanityClient.fetch(query)
