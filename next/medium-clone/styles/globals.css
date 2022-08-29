@@ -35,5 +35,36 @@
     navBar-text mx-3
   }
 
+  .container {
+    @apply
+    w-5/6 flex h-full mx-auto
+  }
+
+  .button {
+    @apply
+    border-slate-400 border bg-black items-center text-white
+    rounded-3xl px-10 py-2 hover:scale-105 smoothed text-center 
+    flex justify-center
+  }
+
+  .post {
+    @apply
+    text-slate-200 flex flex-row items-center justify-between
+  }
+
+  .post-author-info{
+    @apply
+    flex flex-row items-center justify-start text-xs mx-3 my-1
+  }
+
+  .post-post-info{
+    @apply 
+    flex flex-col items-start mx-3 justify-center h-full
+  }
+
+  .post-avatar {
+    @apply 
+    h-10 rounded-md 
+  }
 
 }
