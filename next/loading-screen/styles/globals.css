@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .home {
+        @apply
+        bg-slate-700
+    }
+
+    .aid {
+        @apply 
+        border border-red-500
+    }
+}
