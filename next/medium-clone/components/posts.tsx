@@ -22,7 +22,7 @@ export const Posts = ({posts}:Props) => {
                             <div className="post">
                                 {/* Post info */}
                                 <div
-                                    className="h-32 w-3/4 flex flex-col my-7"
+                                    className="h-32 w-3/4 flex flex-col my-7 overflow-hidden"
                                 >
                                     {/* Author Info */}
                                     <div
@@ -46,7 +46,7 @@ export const Posts = ({posts}:Props) => {
                                     </div>
                                 </div>
                                 <img 
-                                    className="h-32 w-32 border-0 object-contain"
+                                    className="h-32 w-32 border-0 object-contain hover:scale-110 smoothed"
                                     src={
                                         urlFor(post.mainImage.asset).url()!
                                         } 
