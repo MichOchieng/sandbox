@@ -8,10 +8,12 @@ export const PageLoad = () => {
 
     const slideDown = {
         visible: {
-            y:0
+            y:0,
+            scaleY: 1
         },
         hidden: {
-            y:"100vh"
+            y:"100vh",
+            scaleY: 0
         }
     }
 
@@ -27,7 +29,7 @@ export const PageLoad = () => {
             className="absolute top-0 left-0 w-full h-screen flex flex-row items-center justify-center"
         >
             <motion.div
-                className="aid bg-white w-full h-full flex flex-row items-center justify-center"
+                className="bg-white w-full h-full flex flex-row items-center justify-center"
             >
                 <button
                     onClick={() => setButton(!button)}
