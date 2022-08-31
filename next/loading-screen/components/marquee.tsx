@@ -17,7 +17,7 @@ const MyMarquee = ({slides}:any) => {
                         <img 
                             className="
                             object-contain h-56 mx-10 rounded-xl
-                            hover:scale-105 smoothed 
+                            hover:scale-105 smoothed my-5 aid
                             " 
                             src={slide.image}/>
                     )
