@@ -5,7 +5,7 @@
 @layer components {
     .home {
         @apply
-        bg-slate-700
+        bg-white
     }
 
     .aid {
