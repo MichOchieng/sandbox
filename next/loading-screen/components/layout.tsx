@@ -1,44 +1,48 @@
 import { useEffect, useState } from "react"
 import { PageLoad } from "./pageload"
-
-function useLoadingState (initialVal:string, key:string){
-    const [value,setValue] = useState(initialVal)
-
-    useEffect(() => {
-        const loadingValue = window.localStorage.getItem(key)
-
-        if(loadingValue !== null) {
-            setValue(JSON.parse(loadingValue))
-        }
-    },[key])
-
-    useEffect(() => {
-        window.localStorage.setItem(key, JSON.stringify(value))
-    },[key, value])
-
-    return [value,setValue]
-}
+import { useCookies } from "react-cookie"
 
 export const Layout = ({children}:any) => {
-
-    const [loading,setLoading] = useLoadingState("true","loading")
+    const [cookies,setCookies] = useCookies()
+    const [loading,setLoading] = useState(false)
 
     useEffect(() => {
-        setTimeout(() => {
-            if (typeof setLoading == "function") {
-                setLoading("false")
-            }
-        }, 3000)
+        if(!cookies.loading) {
+            // Set cookie
+            setCookies(
+                'loading',
+                'true',
+                {
+                    maxAge: 60 * 10
+                }
+            )
+            setLoading(true)
+            // Remove loading animation in 3s
+            setTimeout(() => {
+                setLoading(false)
+            }, 3000)
+        }
     },[])
 
-    return(
-        <div
-            className="w-screen relative aid h-screen flex flex-col mx-auto items-center"
-        >
-            {
-                (loading === "true") && <PageLoad/>
-            }
-            {children}
-        </div>
-    )
+    if (loading === true) {
+        return(
+            <div
+                className="w-screen relative aid h-screen flex flex-col mx-auto items-center"
+            >
+                <PageLoad/>
+                {children}
+            </div>
+        )    
+    }
+    else {
+        return(
+            <div
+                className="w-screen relative aid h-screen flex flex-col mx-auto items-center"
+            >
+                {children}
+            </div>
+        )
+    }
+
+    
 }
