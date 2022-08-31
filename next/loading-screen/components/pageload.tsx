@@ -29,7 +29,7 @@ export const PageLoad = () => {
             className="absolute top-0 left-0 w-full h-screen flex flex-row items-center justify-center z-50"
         >
             <motion.div
-                className="bg-white w-full h-full flex flex-row items-center justify-center"
+                className="bg-amber-400 w-full h-full flex flex-row items-center justify-center"
             >
                 <button
                     onClick={() => setButton(!button)}
