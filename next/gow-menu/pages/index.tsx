@@ -1,14 +1,19 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Header from '../components/header'
+import Main from '../components/main'
+import Navbar from '../components/navbar'
 
 const Home: NextPage = () => {
   return (
     <div
-      className='h-screen w-screen bg-slate-600'
+      className='h-screen w-screen flex flex-col items-center justify-between bg-slate-600'
     >
-
+        {/* Header */}
+        <Header/>
+        {/* Main Scene */}
+        <Main/>
+        {/* Menu */}
+        <Navbar/>
     </div>
   )
 }
