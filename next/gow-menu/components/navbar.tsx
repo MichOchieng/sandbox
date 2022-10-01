@@ -33,18 +33,39 @@ const Navbar = () => {
         },
     ]
 
+    function getSize(index:number) {
+        switch (index) {
+            case 0:
+                return ["100%","100%"]
+            case 1:
+                return ["90%","95%"]
+            case 2:
+                return ["80%","90%"]
+            case 3:
+                return ["70%","85%"]
+            case 4:
+                return ["60%","80%"]     
+            case 5:
+                return ["50%","75%"]                 
+            default:
+                break;
+        }
+    }
+
     const MenuItem = ( { id, title }:navProps ) => {
         return(
             <motion.span
-                initial={{
-
-                }}
                 animate={{
-
+                    height: (toggle) ? getSize(id)![0] : "0%",
+                    width:  (toggle) ? getSize(id)![1] : "0%",
+                    opacity: (toggle) ? 1 : 0,
                 }}
-                className="bg-slate-800 border-slate-400 border-2 absolute top-1/2 left-1/2"
+                transition={{
+                    duration: 0.5, ease:"easeInOut"
+                }}
+                className={"bg-slate-800 border-slate-400 border-2 absolute mx-auto left-0 right-0 " + `bottom-[${(id)}rem]`}
             >
-                <h1>{title}</h1>
+                <h1 className="text-3xl w-full font-thin tracking-widest text-center text-white">{title}</h1>
             </motion.span>
         )
     }
@@ -53,11 +74,13 @@ const Navbar = () => {
         <div className="w-full flex flex-row items-center justify-center">
             {/* Menu */}
             <div
-                className="h-fit w-fit"
+                className="h-5/6 w-5/6 absolute m-auto top-0 left-0 right-0 bottom-0 aid"
             >
-                {data.map((data) => {
-                    return <MenuItem key={data.id} id={data.id} title={data.title}/>
-                })}
+                {
+                    data.map((data) => {
+                        return <MenuItem key={data.id} id={data.id} title={data.title}/>
+                    })
+                }
             </div>
             {/* Button */}
 
