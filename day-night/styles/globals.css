@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .smoothed {
+    @apply
+    transition-all ease-in-out duration-500
+  }
+}
