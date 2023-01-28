@@ -16,25 +16,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=''>
-      <Parallax pages={5}>
+      <Parallax pages={6}>
         <ParallaxLayer offset={0} speed={0.5} style={{ ...alignCenter, justifyContent: 'center' }}>
           <p>layer 0</p>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 1, end: 3 }} className='flex items-center justify-start border'>
-          <div className={`flex justify-center h-[10rem] w-1/4 text-center rounded-md ml-[15%] bg-amber-300`}>
+        <ParallaxLayer sticky={{ start: 1, end: 4 }} speed={0.5} className='parallax-layer'>
+          <div className={`card bg-amber-300`}>
             <p>layer 1</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.5} speed={1.5} className='flex items-center justify-end border'>
-          <div className={`flex justify-center h-[10rem] w-1/4 text-center rounded-md mr-[15%] bg-purple-400`}>
+        <ParallaxLayer sticky={{ start: 2, end: 4 }} speed={0.5} className='parallax-layer'>
+          <div className={`card bg-purple-400`}>
             <p>layer 2</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.5} speed={1.5} className='flex items-center justify-end border'>
-          <div className={`flex justify-center h-[10rem] w-1/4 text-center rounded-md mr-[15%] bg-purple-400`}>
+        <ParallaxLayer sticky={{ start: 3, end: 4 }} speed={0.5} className='parallax-layer'>
+          <div className={`card bg-blue-400`}>
             <p>layer 3</p>
           </div>
         </ParallaxLayer>
