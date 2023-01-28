@@ -21,19 +21,19 @@ export default function Home() {
           <p>layer 0</p>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 1, end: 4 }} speed={0.5} className='parallax-layer'>
+        <ParallaxLayer sticky={{ start: 1, end: 4 }} speed={1.5} className='parallax-layer'>
           <div className={`card bg-amber-300`}>
             <p>layer 1</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 2, end: 4 }} speed={0.5} className='parallax-layer'>
+        <ParallaxLayer sticky={{ start: 2, end: 4 }} speed={1.5} className='parallax-layer'>
           <div className={`card bg-purple-400`}>
             <p>layer 2</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer sticky={{ start: 3, end: 4 }} speed={0.5} className='parallax-layer'>
+        <ParallaxLayer sticky={{ start: 3, end: 4 }} speed={1.5} className='parallax-layer'>
           <div className={`card bg-blue-400`}>
             <p>layer 3</p>
           </div>
