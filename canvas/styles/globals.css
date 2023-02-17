@@ -3,9 +3,36 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    background: black
+  }
+}
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 @layer components {
+  .smoothed {
+    @apply
+    transition-all ease-in-out duration-500
+  }
 
+  .page-container{
+    @apply
+    flex flex-col w-full h-full min-h-fit mx-auto items-center justify-center md:w-5/6 lg:w-4/6 max-w-[1220px]
+  }
+
+  .aid{
+    @apply
+    border border-red-500
+  }
 }
