@@ -35,4 +35,9 @@
     @apply
     border border-red-500
   }
+
+  .blob {
+    @apply
+    h-72 w-72 bg-emerald-400 absolute rounded-full top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2
+  }
 }
