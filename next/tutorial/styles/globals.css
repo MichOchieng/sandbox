@@ -18,4 +18,9 @@
     w-full h-32 flex flex-row text-white
     bg-black  
   }
+
+  .button{
+    @apply
+    aid
+  }
 }
