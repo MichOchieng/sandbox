@@ -11,18 +11,24 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        rotate: 'rotate 20s linear infinite'
+        rotate: 'rotate 20s linear infinite',
+        hover: 'hover 2s ease-in-out infinite'
       },
       keyframes: {
         rotate: {
           from: {
             transform: 'translate(-50%, -50%) rotate(0deg)',
           },
-          '50%': {
-            transform: 'scale(1.3)'
-          },
           to: {
             transform: 'translate(-50%, -50%) rotate(360deg)',
+          },
+        },
+        hover: {
+          '0%, 100%': {
+            transform: 'translate(0,0)',
+          },
+          '50%': {
+            transform: 'translateY(4px)',
           },
         }
       }

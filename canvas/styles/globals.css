@@ -45,4 +45,48 @@
     @apply
     w-screen h-screen absolute z-20 backdrop-blur-[200px]
   }
+
+  .letterContainer{
+    @apply
+    text-white border 
+    /* [&>span:nth-child(n)]:hover:animate-hover */
+
+    [&>span:nth-child(1)]:hover:-translate-x-1/2
+    [&>span:nth-child(1)]:hover:translate-y-1/4
+    [&>span:nth-child(1)]:hover:rotate-12
+
+    [&>span:nth-child(2)]:hover:-translate-y-2/4
+    [&>span:nth-child(2)]:hover:-rotate-12
+
+    [&>span:nth-child(3)]:hover:translate-y-1/4
+    [&>span:nth-child(3)]:hover:rotate-12
+
+    [&>span:nth-child(4)]:hover:-translate-y-1/4
+    [&>span:nth-child(4)]:hover:-rotate-12
+
+    [&>span:nth-child(5)]:hover:translate-y-1/4
+    [&>span:nth-child(5)]:hover:rotate-12
+
+    [&>span:nth-child(6)]:hover:-translate-y-1/4
+    [&>span:nth-child(6)]:hover:-rotate-12
+
+    [&>span:nth-child(7)]:hover:translate-y-1/4
+    [&>span:nth-child(7)]:hover:rotate-12
+
+    [&>span:nth-child(8)]:hover:-translate-y-1/4
+    [&>span:nth-child(8)]:hover:-rotate-12
+
+    [&>span:nth-child(9)]:hover:translate-y-1/4
+    [&>span:nth-child(9)]:hover:rotate-12
+
+    [&>span:nth-child(10)]:hover:-translate-x-3/4
+    [&>span:nth-child(10)]:hover:-translate-y-1/4
+    [&>span:nth-child(10)]:hover:-rotate-12
+  }
+
+  .letter{
+    @apply
+    font-bold text-6xl inline-block smoothed aid transform
+  }
+  
 }
