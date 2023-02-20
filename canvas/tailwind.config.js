@@ -11,11 +11,19 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-
+        rotate: 'rotate 20s linear infinite'
       },
       keyframes: {
         rotate: {
-          
+          from: {
+            transform: 'translate(-50%, -50%) rotate(0deg)',
+          },
+          '50%': {
+            transform: 'scale(1.3)'
+          },
+          to: {
+            transform: 'translate(-50%, -50%) rotate(360deg)',
+          },
         }
       }
     },
