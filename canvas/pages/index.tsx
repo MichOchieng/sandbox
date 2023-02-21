@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
       <main className='w-screen h-screen flex items-center justify-center overflow-hidden'>
         {/* <PointerBlur/> */}
-        <ExplosiveHeader title='Testing'/>
+        <ExplosiveHeader title='TESTING'/>
       </main>
     </>
   )
