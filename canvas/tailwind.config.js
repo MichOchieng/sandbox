@@ -12,7 +12,8 @@ module.exports = {
     extend: {
       animation: {
         rotate: 'rotate 20s linear infinite',
-        hover: 'hover 2s ease-in-out infinite'
+        hover: 'hover 5s ease-in-out infinite',
+        tile: 'bg 2s ease infinite'
       },
       keyframes: {
         rotate: {
@@ -25,12 +26,20 @@ module.exports = {
         },
         hover: {
           '0%, 100%': {
-            transform: 'translate(0,0)',
+            transform: 'translateY(-0%)',
           },
           '50%': {
-            transform: 'translateY(4px)',
+            transform: 'translateY(-5%)',
           },
-        }
+        },
+        bg: {
+          from: {
+            'background-position': '1000% center',
+          },
+          to: {
+            'background-position': '0% center',
+          },
+        },
       }
     },
   },

@@ -46,47 +46,84 @@
     w-screen h-screen absolute z-20 backdrop-blur-[200px]
   }
 
-  .letterContainer{
+  .headerContainer span{
     @apply
-    text-white border 
-    /* [&>span:nth-child(n)]:hover:animate-hover */
+    inline-block
+  }
 
-    [&>span:nth-child(1)]:hover:-translate-x-1/2
-    [&>span:nth-child(1)]:hover:translate-y-1/4
-    [&>span:nth-child(1)]:hover:rotate-12
+  .headerContainer > .outer {
+    @apply
+    transform duration-300 ease-in-out
+  }
 
-    [&>span:nth-child(2)]:hover:-translate-y-2/4
-    [&>span:nth-child(2)]:hover:-rotate-12
+  .headerContainer:hover > .outer{
+    @apply
+    duration-500
+  }
 
-    [&>span:nth-child(3)]:hover:translate-y-1/4
-    [&>span:nth-child(3)]:hover:rotate-12
+  .headerContainer:hover > .outer > .inner{
+    @apply
+    animate-hover
+  }
 
-    [&>span:nth-child(4)]:hover:-translate-y-1/4
-    [&>span:nth-child(4)]:hover:-rotate-12
-
-    [&>span:nth-child(5)]:hover:translate-y-1/4
-    [&>span:nth-child(5)]:hover:rotate-12
-
-    [&>span:nth-child(6)]:hover:-translate-y-1/4
-    [&>span:nth-child(6)]:hover:-rotate-12
-
-    [&>span:nth-child(7)]:hover:translate-y-1/4
-    [&>span:nth-child(7)]:hover:rotate-12
-
-    [&>span:nth-child(8)]:hover:-translate-y-1/4
-    [&>span:nth-child(8)]:hover:-rotate-12
-
-    [&>span:nth-child(9)]:hover:translate-y-1/4
-    [&>span:nth-child(9)]:hover:rotate-12
-
-    [&>span:nth-child(10)]:hover:-translate-x-3/4
-    [&>span:nth-child(10)]:hover:-translate-y-1/4
-    [&>span:nth-child(10)]:hover:-rotate-12
+  .headerContainer:hover > .outer > .inner > .letter{
+    @apply
+    text-8xl bg-gradient-to-r bg-clip-text text-transparent from-[#98E485] to-[#42E8AC] animate-tile
   }
 
   .letter{
     @apply
-    font-bold text-6xl inline-block smoothed aid transform
+    font-bold text-8xl inline-block transform text-white
+  }
+
+  .headerContainer:hover > .outer:nth-child(1){
+    @apply
+    -translate-x-3/4 translate-y-1/2 rotate-6 
+  }
+
+  .headerContainer:hover > .outer:nth-child(2){
+    @apply
+    -translate-x-[40%] translate-y-[20%] rotate-3
+  }
+
+  .headerContainer:hover > .outer:nth-child(3){
+    @apply
+    -translate-x-[10%] translate-y-[60%] -rotate-6
+  }
+
+  .headerContainer:hover > .outer:nth-child(4){
+    @apply
+    -translate-x-[0%] translate-y-[8%] -rotate-[8deg] 
+  }
+
+  .headerContainer:hover > .outer:nth-child(5){
+    @apply
+    -translate-x-[0%] -translate-y-[20%] rotate-[5deg]  
+  }
+
+  .headerContainer:hover > .outer:nth-child(6){
+    @apply
+    -translate-x-[0%] translate-y-[20%] -rotate-[3deg]  
+  }
+
+  .headerContainer:hover > .outer:nth-child(7){
+    @apply
+    -translate-x-[0%] -translate-y-[40%] -rotate-[5deg]  
+  }
+
+  .headerContainer:hover > .outer:nth-child(8){
+    @apply
+    -translate-x-[0%] translate-y-[15%] rotate-[10deg]  
+  }
+
+  .headerContainer:hover > .outer:nth-child(9){
+    @apply
+    -translate-x-[0%] -translate-y-[50%] rotate-[8deg]  
+  }
+
+  .headerContainer:hover > .outer:nth-child(10){
+    @apply
+    -translate-x-[0%] translate-y-[15%] -rotate-[6deg]  
   }
   
 }
