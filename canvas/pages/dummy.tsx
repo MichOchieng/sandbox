@@ -13,7 +13,8 @@ export default function Dummy() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='w-screen h-screen flex items-center justify-center overflow-hidden'>
-        <PointerBlur/>
+        {/* <PointerBlur/> */}
+        <h1 className='text-white'>dummy</h1>
       </main>
     </>
   )
