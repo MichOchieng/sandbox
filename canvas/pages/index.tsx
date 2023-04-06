@@ -13,8 +13,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='w-screen h-screen flex items-center justify-center overflow-hidden'>
-        {/* <PointerBlur/> */}
-        <ExplosiveHeader title='TESTING'/>
+        <PointerBlur/>
+        {/* <ExplosiveHeader title='TESTING'/> */}
       </main>
     </>
   )
