@@ -1,6 +1,11 @@
 import React from 'react'
 
-const About = () => {
+export const metadata = {
+    title: 'About',
+    description: 'Testing out new features',
+  }
+
+const AboutPage = () => {
   return (
     <div>
         <h1>About</h1>
@@ -10,4 +15,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutPage
