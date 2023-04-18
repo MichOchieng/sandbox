@@ -23,7 +23,11 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    animation: spin 1s linear infinite;
+  }
+
+  .spinner {
+    @apply
+    animate-spin
   }
 
   .repos-container {
@@ -85,6 +89,43 @@
     margin-right: 0.5rem;
   }
   
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem;
+  
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  
+  .card .card-content {
+    margin-top: 1rem;
+  }
+  
+  .card .card-stats {
+    display: flex;
+    margin: 1rem 0;
+  }
+  
+  .card .card-stat {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .card .card-stat svg {
+    margin-right: 0.5rem;
+  }
+  
+  .card .card-stat span {
+    font-size: 0.9rem;
+  }
 
 
 }
