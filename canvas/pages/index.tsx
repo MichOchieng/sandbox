@@ -16,7 +16,7 @@ export default function Home() {
       <main className='w-screen h-screen min-h-fit flex items-center justify-center overflow-scroll'>
         {/* <PointerBlur/> */}
         {/* <ExplosiveHeader title='TESTING'/> */}
-        <Img/>
+        {/* <Img/> */}
       </main>
     </>
   )
