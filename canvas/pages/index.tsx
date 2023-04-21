@@ -1,4 +1,5 @@
 import Img from '@/components/Img'
+import Parallax from '@/components/Parallax'
 // import ExplosiveHeader from '@/components/exposiveHeader'
 // import PointerBlur from '@/components/pointerBlur'
 import Head from 'next/head'
@@ -13,10 +14,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='w-screen h-screen min-h-fit flex items-center justify-center overflow-scroll'>
+      {/* w-screen h-screen min-h-fit flex items-center justify-center overflow-scroll */}
+      <main className='w-full h-screen flex items-start justify-center'>
         {/* <PointerBlur/> */}
         {/* <ExplosiveHeader title='TESTING'/> */}
         {/* <Img/> */}
+        <Parallax/>
       </main>
     </>
   )
