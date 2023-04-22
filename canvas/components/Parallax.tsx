@@ -22,7 +22,7 @@ function Container({ id }: { id: number }) {
     <div className="flex h-full items-center justify-items-center relative text-center snap-center">
       <div
         ref={ref}
-        className="relative snap-center w-80 h-[500px] m-6 overflow-hidden bg-white"
+        className="relative snap-center w-80 h-[500px] m-6 overflow-hidden"
       >
         <Image
           src={img}
@@ -51,7 +51,7 @@ const Parallax = () => {
     <>
       <div className="h-full aid snap-y snap-mandatory">
         {[1, 2, 3, 4, 5].map((num: number) => (
-          <Container id={num} />
+          <Container key={num} id={num} />
         ))}
       </div>
       <motion.div
