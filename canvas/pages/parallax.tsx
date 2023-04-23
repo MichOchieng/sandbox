@@ -29,13 +29,13 @@ const Block1 = () => {
             className='mt-[-30vh]'
         >
             {/* Page */}
-            <div ref={targetRef} className="w-full h-[300vh]">
+            <div ref={targetRef} className="w-full h-[100vh]">
                 {/* Sticky wrapper */}
                 <div className="sticky top-[10vh] aid border-dashed">
                     <div className="flex justify-center">
                         {/* img */}
                         <motion.div
-                            style={{ x, scale, opacity }}
+                            style={{ x, opacity }}
                             className="origin-top relative h-[400px] w-[600px] rounded">
                             <Image
                                 src={'https://images.unsplash.com/photo-1651613186467-b7210be490e4'}
@@ -319,9 +319,75 @@ const Block2 = () => {
 }
 
 const Block3 = () => {
-    return (
-        <section className="">
+    const targetRef = React.useRef(null)
 
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ["start end", "end end"],
+    })
+
+    const scale = useTransform(scrollYProgress, [0, 0.5], [2, 1])
+    // const scale1 = useTransform(scrollYProgress, [0.1, 0.5], [1, 2.5])
+    const x = useTransform(
+        scrollYProgress,
+        [0, 0.5],
+        ["-100%", "0%"]
+    )
+
+    const imgOpacity = useTransform(
+        scrollYProgress,
+        [0.5, 1],
+        [0, 1]
+    )
+
+    const pOpacity = useTransform(
+        scrollYProgress,
+        [0.7, 1],
+        [0, 1]
+    )
+
+    const pY = useTransform(
+        scrollYProgress,
+        [0, 1],
+        ["300%", "0%"]
+    )
+
+    return (
+        <section className="mt-[10vh] text-white aid">
+            <div ref={targetRef} className="h-[100vh] w-full relative">
+                <div className="sticky origin-top flex aid text-2xl font-bold">
+                    <motion.div
+                        style={{ x }}
+                        className="p-[2rem] flex items-center flex-col justify-items-center h-full w-1/2">
+                        <h2>Slide In </h2>
+                    </motion.div>
+                    <motion.div
+                        style={{ scale }}
+                        className="p-[2rem] flex items-center flex-col justify-items-center h-full w-1/2">
+                        <h2>Scroll Down to Zoom Out</h2>
+                    </motion.div>
+                </div>
+                {/* img */}
+                <div className="flex aid p-10 border-dashed justify-center">
+                    <motion.div
+                        style={{ opacity: imgOpacity}}
+                        className="relative h-[400px] w-[600px] rounded">
+                        <Image
+                            src={img}
+                            alt='car'
+                            className='object-cover'
+                            fill
+                        />
+                    </motion.div>
+                </div>
+                <div className="flex w-full aid border-dashed justify-center">
+                    <motion.p
+                        style={{ opacity: pOpacity, y: pY}}
+                        className="text-xl font-semibold w-1/2 mx-auto">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem expedita, nulla minima amet voluptatibus eaque laudantium velit tenetur harum dolorum dignissimos deleniti pariatur vitae, incidunt ex! Dolorum inventore nobis fugit.
+                    </motion.p>
+                </div>
+            </div>
         </section>
     )
 }
@@ -357,6 +423,7 @@ const Parallax = () => {
             <div className="relative z-10 w-full overflow-x-clip border border-amber-500">
                 <Block1 />
                 {/* <Block2 /> */}
+                <Block3 />
             </div>
         </main>
     )
